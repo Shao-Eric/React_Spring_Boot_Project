@@ -13,11 +13,13 @@
     </bean>
     
     
+    <!-- load the properties file: sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
 
     <!-- Define your beans here -->
     
     <!-- Define dependency here -->
-    <bean id="myFortune" 
+    <bean id="myFortuneService" 
     	class="springdemo.HappyFortuneService">
     </bean>
     
@@ -25,7 +27,17 @@
     	class="springdemo.TrackCoach">
     	
     	<!-- Set up constructor injection -->
-    	<constructor-arg ref="myFortune" />
+    	<constructor-arg ref="myFortuneService" />
+    </bean>
+    
+    <bean id="myCricketCoach"
+    	class="springdemo.CricketCoach">
+    	<!-- set up setter injection -->
+    	<property name="fortuneService" ref="myFortuneService" />
+    	
+    	<!-- inject literal values -->
+    	<property name="emailAddress" value="${foo.email}" />
+    	<property name="team" value="${foo.team}" />
     </bean>
     
 </beans>
