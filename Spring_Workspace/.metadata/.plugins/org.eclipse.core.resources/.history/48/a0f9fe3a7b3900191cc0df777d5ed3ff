@@ -27,9 +27,7 @@ public class TrackCoach implements Coach {
 		System.out.println("TrackCoach: inside method doMyStartupStuff");
 	}
 	
-	// add a destroy method
-	public void doMyCleanupStuffYoYo() {
-		System.out.println("TrackCoach: inside method doMyCleanupStuffYoYo");
-	}
+	
+	// add a desctroy method
 
 }
