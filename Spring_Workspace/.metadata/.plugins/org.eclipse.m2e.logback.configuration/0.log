@@ -2107,3 +2107,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-03-09 20:59:18,143 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-03-09 20:59:18,145 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-03-09 20:59:18,145 [Worker-117: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/shaoqianghu/Desktop/React_SpringBoot/Spring_Workspace/24-spring-data-rest-cruddemo/src/test/resources
+2019-03-09 21:18:31,419 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-03-09 21:18:42,959 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-09 21:18:42,977 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-09 21:18:43,013 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-09 21:18:43,018 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-09 21:18:43,018 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/shaoqianghu/Desktop/React_SpringBoot/Spring_Workspace/01-spring-boot-demo/src/test/resources

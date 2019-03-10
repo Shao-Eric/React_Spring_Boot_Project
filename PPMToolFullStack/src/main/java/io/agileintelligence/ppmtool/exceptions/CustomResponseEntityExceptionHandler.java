@@ -1,4 +1,4 @@
-package eric.fullstack.reactspring.exceptions;
+package io.agileintelligence.ppmtool.exceptions;
 
 
 import org.springframework.http.HttpStatus;
@@ -12,10 +12,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 @RestController
 public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+
     @ExceptionHandler
     public final ResponseEntity<Object> handleProjectIdException(ProjectIdException ex, WebRequest request){
         ProjectIdExceptionResponse exceptionResponse = new ProjectIdExceptionResponse(ex.getMessage());
-        return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
-
 }

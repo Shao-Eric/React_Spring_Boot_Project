@@ -1,5 +1,4 @@
-package eric.fullstack.reactspring.domain;
-
+package io.agileintelligence.ppmtool.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -10,23 +9,26 @@ import java.util.Date;
 
 @Entity
 public class Project {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @NotBlank(message = "Project name is required")
+    private long id;
+
+    @NotBlank(message="Project name is required!")
     private String projectName;
-    @NotBlank(message = "Project Identifier is required")
-    @Size(min = 4, max = 5, message = "Please use 4 to 5 characters")
-    @Column(updatable = false, unique = true)
+
+    @NotBlank(message="Project Identifier is required!")
+    @Size(min=4, max=5, message="Please use 4 to 5 characters")
+    @Column(updatable = false, unique = true) //validation on the database layer
     private String projectIdentifier;
 
-    @NotBlank(message = "Project description is required")
+    @NotBlank(message="Project description is required!")
     private String description;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date start_date;
     @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date end_date;
+    private Date send_date;
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date created_At;
     @JsonFormat(pattern = "yyyy-mm-dd")
@@ -35,11 +37,11 @@ public class Project {
     public Project() {
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -75,12 +77,12 @@ public class Project {
         this.start_date = start_date;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public Date getSend_date() {
+        return send_date;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setSend_date(Date send_date) {
+        this.send_date = send_date;
     }
 
     public Date getCreated_At() {
@@ -100,13 +102,27 @@ public class Project {
     }
 
     @PrePersist
-    protected void onCreate() {
+    protected void onCreate(){
         this.created_At = new Date();
     }
 
     @PreUpdate
-    protected void onUpdate() {
+    protected void onUpdate(){
         this.updated_At = new Date();
+    }
 
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", projectName='" + projectName + '\'' +
+                ", projectIdentifier='" + projectIdentifier + '\'' +
+                ", description='" + description + '\'' +
+                ", start_date=" + start_date +
+                ", send_date=" + send_date +
+                ", created_At=" + created_At +
+                ", updated_At=" + updated_At +
+                '}';
     }
 }
+
