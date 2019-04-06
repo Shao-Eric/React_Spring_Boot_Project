@@ -1,0 +1,19 @@
+{
+    "mac": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-notetaker-20190324191740-authRole",
+            "UnauthRoleArn": "arn:aws:iam::631083476875:role/amplify-notetaker-20190324191740-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::631083476875:role/amplify-notetaker-20190324191740-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-notetaker-20190324191740-deployment",
+            "UnauthRoleName": "amplify-notetaker-20190324191740-unauthRole",
+            "StackName": "amplify-notetaker-20190324191740",
+            "StackId": "arn:aws:cloudformation:us-east-1:631083476875:stack/amplify-notetaker-20190324191740/05692bb0-4e8b-11e9-a743-12557b211f7c"
+        },
+        "categories": {
+            "auth": {
+                "cognito5e75c582": {}
+            }
+        }
+    }
+}
